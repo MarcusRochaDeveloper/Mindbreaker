@@ -44,11 +44,3 @@ Um mini-jogo ULTRA IMPOSSÍVEL que desafia sua paciência, inteligência e sanid
 - Lógica de validação impossível
 
 ---
-
-## 📦 Instalação
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/SEU_USUARIO/impossible-form.git
-
