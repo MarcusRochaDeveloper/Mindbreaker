@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Formulário Impossível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>📋 O Formulário Mais Impossível do Mundo</h1>
+            <div class="stats">
+                <span>Tentativas: <span id="attempts">0</span></span>
+                <span>Tempo: <span id="timer">00:00</span></span>
+                <span>Sanidade: <span id="sanity">100</span>%</span>
+            </div>
+        </header>
+
+        <div class="chaos-indicators">
+            <div class="indicator" id="dataCorruption">💾 Corrupção: 0%</div>
+            <div class="indicator" id="fieldShuffle">🔄 Embaralhamento: Ativo</div>
+            <div class="indicator" id="gravityEffect">🌍 Gravidade: Normal</div>
+        </div>
+
+        <form id="impossibleForm" class="impossible-form">
+            <div class="form-field" data-field="name">
+                <label>Nome Completo:</label>
+                <input type="text" id="name" placeholder="Digite seu nome..." maxlength="50">
+                <div class="field-obstacle" id="nameObstacle"></div>
+            </div>
+
+            <div class="form-field" data-field="age">
+                <label>Idade:</label>
+                <input type="number" id="age" placeholder="Sua idade..." min="1" max="150">
+                <div class="field-obstacle" id="ageObstacle"></div>
+            </div>
+
+            <div class="form-field" data-field="email">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+                <div class="field-obstacle" id="emailObstacle"></div>
+            </div>
+
+            <div class="form-field" data-field="phone">
+                <label>Telefone:</label>
+                <input type="tel" id="phone" placeholder="(00) 00000-0000" maxlength="15">
+                <div class="field-obstacle" id="phoneObstacle"></div>
+            </div>
+
+            <div class="form-field" data-field="address">
+                <label>Endereço:</label>
+                <input type="text" id="address" placeholder="Rua, número, bairro...">
+                <div class="field-obstacle" id="addressObstacle"></div>
+            </div>
+
+            <div class="form-field" data-field="cpf">
+                <label>CPF:</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+                <div class="field-obstacle" id="cpfObstacle"></div>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Enviar (Impossível)</button>
+        </form>
+
+        <!-- Roleta de Caracteres -->
+        <div id="charRoulette" class="roulette-modal" style="display: none;">
+            <div class="roulette-content">
+                <h3>🎰 Roleta de Caracteres</h3>
+                <div class="roulette-display" id="rouletteDisplay">?</div>
+                <button id="spinRoulette">Girar Roleta</button>
+                <button id="closeRoulette">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Mini-game de Digitação -->
+        <div id="typingChallenge" class="challenge-modal" style="display: none;">
+            <div class="challenge-content">
+                <h3>⌨️ Desafio de Digitação</h3>
+                <p id="challengeText">Digite: "Eu sou um gênio incompreendido"</p>
+                <input type="text" id="challengeInput" placeholder="Digite aqui...">
+                <div id="challengeTimer">10s</div>
+            </div>
+        </div>
+
+        <!-- Notificações de Caos -->
+        <div id="chaosNotifications"></div>
+
+        <!-- Tela de Game Over -->
+        <div id="gameOver" class="game-over" style="display: none;">
+            <div class="game-over-content">
+                <h2>💀 VOCÊ PERDEU!</h2>
+                <p id="gameOverMessage">O formulário venceu novamente...</p>
+                <button onclick="restartGame()">Tentar Novamente (Se For Corajoso)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
